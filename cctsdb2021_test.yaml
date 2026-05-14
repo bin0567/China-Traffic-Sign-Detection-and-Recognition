@@ -1,0 +1,15 @@
+# 交通标志检测测试集配置 (CCTSDB)
+# 专门用于测试集评估
+
+path: ./data
+train: test/images
+val: test/images
+test: test/images
+
+nc: 3
+names: ['mandatory', 'prohibitory', 'warning']
+
+# 类别说明:
+# 0 - mandatory: 指示标志 (蓝底白圆/方)
+# 1 - prohibitory: 禁止标志 (红底白圆/斜杠)
+# 2 - warning: 警告标志 (黄底黑三角形)
