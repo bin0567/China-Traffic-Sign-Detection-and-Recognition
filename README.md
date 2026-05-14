@@ -1,7 +1,7 @@
 # China-Traffic-Sign-Detection-and-Recognition
 # 中国交通标志检测和识别系统
 
-基于 **YOLO26n**（YOLOv8-nano）的中国交通标志检测与识别系统。使用 **CCTSDB2021** 数据集训练，对三类交通标志（指示标志、禁止标志、警告标志）进行实时检测与识别。
+基于 **YOLO26n** 的中国交通标志检测与识别系统。使用 **CCTSDB2021** 数据集训练，对三类交通标志（指示标志、禁止标志、警告标志）进行实时检测与识别。
 
 最终模型指标：**mAP50 = 0.968**，精确率 **0.952**，召回率 **0.930**。
 
@@ -86,7 +86,7 @@
 
 | 组件 | 细节 |
 |------|------|
-| 模型名称 | YOLO26n (YOLOv8-nano) |
+| 模型名称 | YOLO26n |
 | 参数量 | 约 2.6M |
 | FLOPs | 约 6.7 GFLOPs |
 | 输入尺寸 | 640 × 640 |
@@ -212,7 +212,7 @@ python test.py
 
 | 参数 | 值 | 说明 |
 |------|-----|------|
-| `model` | `yolo26n.pt` | 使用 YOLOv8-nano 预训练权重 |
+| `model` | `yolo26n.pt` | 使用 YOLO26n 预训练权重 |
 | `epochs` | 50 | 最大训练轮次 |
 | `patience` | 5 | 早停等待轮次（验证 mAP50 连续 5 轮未提升则停止） |
 | `batch` | 16 | 每批次图像数（受 RTX 4060 8GB 显存限制） |
@@ -417,7 +417,7 @@ YOLO/
 │                                      #   val:   test/images
 │                                      #   test:  test/images
 │
-├── yolo26n.pt                         # YOLOv8-nano 预训练权重
+├── yolo26n.pt                         # YOLO26n 预训练权重
 │
 ├── 系统架构图.png                      # 系统架构图
 ├── 中国交通标志检测和识别系统.docx      # 项目论文
@@ -518,5 +518,3 @@ YOLO/
 
 1. **Ultralytics YOLO** — https://github.com/ultralytics/ultralytics
 2. **CCTSDB 2021** — Chinese Traffic Sign Database，长沙理工大学
-3. **YOLOv8** — Glenn Jocher, Ultralytics, 2023
-4. **论文** — 中国交通标志检测和识别系统 (`中国交通标志检测和识别系统.docx`)
